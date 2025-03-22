@@ -3,7 +3,7 @@ module github.com/BraveY/snapshotter-converter
 go 1.24.0
 
 require (
-	github.com/containerd/containerd v1.7.27
+	github.com/containerd/containerd v1.7.23
 	github.com/containerd/errdefs v1.0.0
 	github.com/containerd/fifo v1.1.0
 	github.com/containerd/nydus-snapshotter v0.15.0
@@ -30,7 +30,6 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/moby/sys/sequential v0.6.0 // indirect
-	github.com/moby/sys/userns v0.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
@@ -39,3 +38,5 @@ require (
 	google.golang.org/protobuf v1.35.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/containerd/containerd => github.com/nydusaccelerator/containerd v1.7.18-nydus.10
