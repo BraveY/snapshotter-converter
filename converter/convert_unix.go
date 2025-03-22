@@ -38,8 +38,6 @@ import (
 	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
-
-	"github.com/containerd/nydus-snapshotter/pkg/label"
 )
 
 const EntryBlob = "image.blob"
@@ -52,6 +50,7 @@ const envNydusBuilder = "NYDUS_BUILDER"
 const envNydusWorkDir = "NYDUS_WORKDIR"
 
 const configGCLabelKey = "containerd.io/gc.ref.content.config"
+const NydusRefLayer = "containerd.io/snapshot/nydus-ref"
 
 var bufPool = sync.Pool{
 	New: func() interface{} {
@@ -885,7 +884,7 @@ func makeBlobDesc(ctx context.Context, cs content.Store, opt PackOption, sourceD
 	}
 
 	if opt.OCIRef {
-		targetDesc.Annotations[label.NydusRefLayer] = sourceDigest.String()
+		targetDesc.Annotations[NydusRefLayer] = sourceDigest.String()
 	}
 
 	if opt.Encrypt {
@@ -1165,10 +1164,10 @@ func MergeLayers(ctx context.Context, cs content.Store, descs []ocispec.Descript
 		defer ra.Close()
 		var originalDigest *digest.Digest
 		if opt.OCIRef {
-			digestStr := nydusBlobDesc.Annotations[label.NydusRefLayer]
+			digestStr := nydusBlobDesc.Annotations[NydusRefLayer]
 			_originalDigest, err := digest.Parse(digestStr)
 			if err != nil {
-				return nil, nil, errors.Wrapf(err, "invalid label %s=%s", label.NydusRefLayer, digestStr)
+				return nil, nil, errors.Wrapf(err, "invalid label %s=%s", NydusRefLayer, digestStr)
 			}
 			originalDigest = &_originalDigest
 		}
@@ -1258,7 +1257,7 @@ func MergeLayers(ctx context.Context, cs content.Store, descs []ocispec.Descript
 			},
 		}
 		if opt.OCIRef {
-			blobDesc.Annotations[label.NydusRefLayer] = layers[idx].OriginalDigest.String()
+			blobDesc.Annotations[NydusRefLayer] = layers[idx].OriginalDigest.String()
 		}
 
 		if opt.Encrypt != nil {

@@ -9,8 +9,6 @@ github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDk
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
 github.com/containerd/cgroups/v3 v3.0.3 h1:S5ByHZ/h9PMe5IOQoN7E+nMc2UcLEM/V48DGDJ9kip0=
 github.com/containerd/cgroups/v3 v3.0.3/go.mod h1:8HBe7V3aWGLFPd/k03swSIsGjZhHI2WzJmticMgVuz0=
-github.com/containerd/containerd/v2 v2.0.0 h1:qLDdFaAykQrIyLiqwQrNLLz95wiC36bAZVwioUwqShM=
-github.com/containerd/containerd/v2 v2.0.0/go.mod h1:j25kDy9P48/ngb1sxWIFfK6GsnqOHoSqo1EpAod20VQ=
 github.com/containerd/continuity v0.4.4 h1:/fNVfTJ7wIl/YPMHjf+5H32uFhl63JucB34PlCpMKII=
 github.com/containerd/continuity v0.4.4/go.mod h1:/lNJvtJKUQStBzpVQ1+rasXO1LAWtUQssk28EZvJ3nE=
 github.com/containerd/errdefs v1.0.0 h1:tg5yIfIlQIrxYtu9ajqY42W3lpS19XqdxRQeEwYG8PI=
@@ -21,10 +19,6 @@ github.com/containerd/fifo v1.1.0 h1:4I2mbh5stb1u6ycIABlBw9zgtlK8viPI9QkQNRQEEmY
 github.com/containerd/fifo v1.1.0/go.mod h1:bmC4NWMbXlt2EZ0Hc7Fx7QzTFxgPID13eH0Qu+MAb2o=
 github.com/containerd/log v0.1.0 h1:TCJt7ioM2cr/tfR8GPbGf9/VRAX8D2B4PjzCpfX540I=
 github.com/containerd/log v0.1.0/go.mod h1:VRRf09a7mHDIRezVKTRCrOq78v577GXq3bSa3EhrzVo=
-github.com/containerd/nydus-snapshotter v0.15.0 h1:RqZRs1GPeM6T3wmuxJV9u+2Rg4YETVMwTmiDeX+iWC8=
-github.com/containerd/nydus-snapshotter v0.15.0/go.mod h1:biq0ijpeZe0I5yZFSJyHzFSjjRZQ7P7y/OuHyd7hYOw=
-github.com/containerd/platforms v1.0.0-rc.0 h1:GuHWSKgVVO3POn6nRBB4sH63uPOLa87yuuhsGLWaXAA=
-github.com/containerd/platforms v1.0.0-rc.0/go.mod h1:T1XAzzOdYs3it7l073MNXyxRwQofJfqwi/8cRjufIk4=
 github.com/containerd/typeurl/v2 v2.2.2 h1:3jN/k2ysKuPCsln5Qv8bzR9cxal8XjkxPogJfSNO31k=
 github.com/containerd/typeurl/v2 v2.2.2/go.mod h1:95ljDnPfD3bAbDJRugOiShd/DlAAsxGtUBhJxIn7SCk=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
