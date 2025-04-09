@@ -43,6 +43,7 @@ type PackOption struct {
 	ChunkSize        string
 	BatchSize        string
 	Encrypt          bool
+	Crc32            bool
 	Timeout          *time.Duration
 
 	Features Features
@@ -156,6 +157,9 @@ func buildPackArgs(option PackOption) ([]string, error) {
 	}
 	if option.Encrypt {
 		args = append(args, "--encrypt")
+	}
+	if option.Crc32 {
+		args = append(args, "--crc")
 	}
 	if option.AttributesPath != "" {
 		args = append(args, "--attributes", option.AttributesPath)

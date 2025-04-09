@@ -84,6 +84,8 @@ type PackOption struct {
 	Timeout *time.Duration
 	// Whether the generated Nydus blobs should be encrypted.
 	Encrypt bool
+	// Crc32 enables calculating crc32 checksum for each compressed chunk.
+	Crc32 bool
 	// Pack to nydus blob from a directory.
 	FromDir string
 	// Path to specified nydus attributes configuration file.

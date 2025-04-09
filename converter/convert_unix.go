@@ -406,6 +406,7 @@ func packFromDirectory(ctx context.Context, dest io.Writer, opt PackOption, buil
 			Compressor:       opt.Compressor,
 			Timeout:          opt.Timeout,
 			Encrypt:          opt.Encrypt,
+			Crc32:            opt.Crc32,
 
 			Features: opt.features,
 		})
